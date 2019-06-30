@@ -1,6 +1,11 @@
 # otus-demo-queues
 This project for Demo Lesson. Topic Laravel queues
 
+Guide
+1. git clone git@github.com:egerasimchuk/otus-demo-queues.git
+2. composer install
+3. php artisan migrate
+4. php artisan queue:work --tries 5 --delay 5
 
 Laravel Installation via Vagrant Hometead
 From: https://laravel.com/docs/5.8/homestead#installation-and-setup
