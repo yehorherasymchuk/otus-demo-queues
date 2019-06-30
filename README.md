@@ -2,8 +2,8 @@
 This project for Demo Lesson. Topic Laravel queues
 
 
-#Laravel Installation via Vagrant Hometead
-##From: https://laravel.com/docs/5.8/homestead#installation-and-setup
+Laravel Installation via Vagrant Hometead
+From: https://laravel.com/docs/5.8/homestead#installation-and-setup
 1. Download Virtual box https://www.virtualbox.org/wiki/Downloads
 2. Download Vagrant https://www.vagrantup.com/downloads.html
 3. Install Laravel homestead vagrant box add laravel/homestead At the beginning of the installation select provider number 3: virtual box Wait 2-5 min for installation
