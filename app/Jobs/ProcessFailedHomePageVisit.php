@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -10,21 +11,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 
-class ProcessUserRegistration implements ShouldQueue
+class ProcessFailedHomePageVisit implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /** @var User */
-    private $user;
-
-    /**
-     * ProcessUserRegistration constructor.
-     * @param User $user
-     */
-    public function __construct(User $user)
-    {
-        $this->user = $user;
-    }
 
     /**
      * Execute the job.
@@ -33,6 +23,6 @@ class ProcessUserRegistration implements ShouldQueue
      */
     public function handle()
     {
-        Log::info($this->user->email . ": " . $this->user->name);
+        throw new \Exception('ProcessFailedAuthLoginPage');
     }
 }

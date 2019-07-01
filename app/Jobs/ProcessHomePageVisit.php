@@ -10,7 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 
-class ProcessUserRegistration implements ShouldQueue
+class ProcessHomePageVisit implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -33,6 +33,9 @@ class ProcessUserRegistration implements ShouldQueue
      */
     public function handle()
     {
-        Log::info($this->user->email . ": " . $this->user->name);
+        Log::info('Visit', [
+            $this->user->email,
+        ]);
     }
+
 }

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessFailedUserRegistration;
-use Illuminate\Http\Request;
+use App\Jobs\ProcessFailedHomePageVisit;
+use App\Jobs\ProcessHomePageVisit;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -25,7 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        ProcessFailedUserRegistration::dispatch(Auth::user());
+        if (Auth::user()) {
+            ProcessHomePageVisit::dispatch(Auth::user());
+        } else {
+            ProcessFailedHomePageVisit::dispatch();
+        }
         return view('home');
     }
 }
