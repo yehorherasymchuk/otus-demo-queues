@@ -17,12 +17,17 @@ https://www.vagrantup.com/downloads.html
 vagrant box add laravel/homestead
 At the beginning of the installation select provider number 3: virtual box
 Wait 2-5 min for installation
+
 4. Clone base configs and checkout to stable version
-git clone https://github.com/laravel/homestead.git ~/Homestead
+git clone https://github.com/laravel/homestead.git 
+
 cd ~/Homestead
+
 git checkout release
 5. Create Homestead.yaml
+
 Linux:
+
 bash init.sh
 
 Windows:
@@ -31,6 +36,7 @@ init.bat
 Set  your project folder  
 folders:
 - map: ~/Work/otus/queues
+
 to: /home/vagrant/code/queues
 7. Add config to /etc/hosts  
 192.168.10.10 homestead.test
