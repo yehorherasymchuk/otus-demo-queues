@@ -42,13 +42,14 @@ Windows:
 
 init.bat
 
-6. Configure Homestead.yaml 
+6. Configure Homestead.yaml
+
 Set  your project folder 
 
 folders:
 - map: ~/Work/otus/queues
 
-to: /home/vagrant/code/queues
+- to: /home/vagrant/code/queues
 
 7. Add config to /etc/hosts  
 
