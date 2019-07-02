@@ -13,7 +13,8 @@ From: https://laravel.com/docs/5.8/homestead#installation-and-setup
 https://www.virtualbox.org/wiki/Downloads
 2. Download Vagrant
 https://www.vagrantup.com/downloads.html
-3. Install Laravel homestead vagrant box add laravel/homestead
+3. Install Laravel homestead
+vagrant box add laravel/homestead
 At the beginning of the installation select provider number 3: virtual box
 Wait 2-5 min for installation
 4. Clone base configs and checkout to stable version
